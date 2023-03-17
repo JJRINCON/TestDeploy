@@ -1,0 +1,51 @@
+.content{
+    display: flex;
+}
+
+#sidenav{
+    width: 12vw;
+    position: fixed;
+    top: 7.6vh;
+    left: 0;
+}
+
+.center{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 7.6vh;
+    left: 5vw;
+}
+
+table{
+    margin: 0 auto;
+    width: 87%;
+}
+
+.add-income{
+    float: right;
+}
+
+.title{
+    font-size: 70px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.expenses-title{
+    text-align: center;
+}
+
+.expenses-title h2{
+    font-size: 30px;
+}
+
+.total-expenses h2{
+    font-size: 25px;
+}
+
+.buttons{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}

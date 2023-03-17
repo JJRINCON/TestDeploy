@@ -1,0 +1,19 @@
+#sidenav{
+    width: 11vw;
+    position: fixed;
+    top: 7.1vh;
+    left: 0;
+}
+
+.center{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 7.6vh;
+    left: 5vw;
+}
+
+#image{
+    display: flex;
+    margin-left: 18vw;
+}

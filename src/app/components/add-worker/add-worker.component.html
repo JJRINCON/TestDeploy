@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+     <h1 mat-dialog-title class="text-center">{{title}}</h1>
+     <div>
+         <form [formGroup]="addWorkerForm">
+             <div class="form-group mb-2">
+                 <label for="name" class="form-label">Nombre</label>
+                 <input type="text" class="form-control" placeholder="Ingrese el nombre" id="name" formControlName="name" >
+             </div>
+             <div class="form-group mb-2">
+                 <label for="contact" class="form-label">Numero de contacto</label>
+                 <input type="number" class="form-control" formControlName="contact" id="contact" placeholder="Ingrese el numero de contacto">
+             </div>
+         </form>
+     </div>
+     <div class="btn-group mt-3">
+         <button class="btn btn-success col-4" (click)="action()">{{btnTxt}}</button>
+         <div class="col-1"></div>
+         <button mat-dialog-close class="btn btn-danger col-4">Cancelar</button>
+     </div>
+    </div>
+ </div>

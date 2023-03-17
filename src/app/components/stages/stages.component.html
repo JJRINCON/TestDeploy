@@ -1,0 +1,53 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <div class="content">
+        <div class="sidenav">
+            <app-sidenav></app-sidenav>
+        </div>
+        <div class="center">
+            <div class="title">
+                <h1 style="font-size: 40px;">{{(crop$ | async)?.nombreCultivo}}</h1>
+            </div>
+            <div class="stages">
+                <div class="card border-dark" id="card-container">
+                    <div class="card-body" id="crop-card">
+                        <h1 class="card-title">Siembra</h1>
+                        <img class="stage-image" src="../../../assets/images/siembra.png" alt="">
+                        <div>
+                            <button type="button" class="btn btn-warning" (click)="goToExpenses('Siembra')" >Gastos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-dark" id="card-container">
+                    <div class="card-body" id="crop-card">
+                        <h1 class="card-title">Deyerbo</h1>
+                        <img class="stage-image" src="../../../assets/images/deyerbo.png" alt="">
+                        <div>
+                            <button type="button" class="btn btn-warning" (click)="goToExpenses('Deyerbo')">Gastos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-dark" id="card-container">
+                    <div class="card-body" id="crop-card">
+                        <h1 class="card-title">Aporque</h1>
+                        <img class="stage-image" src="../../../assets/images/aporque.png" alt="">
+                        <div>
+                            <button type="button" class="btn btn-warning" (click)="goToExpenses('Aporque')" >Gastos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-dark" id="card-container">
+                    <div class="card-body" id="crop-card">
+                        <h1 class="card-title">Cosecha</h1>
+                        <img class="stage-image" src="../../../assets/images/cosecha.png" alt="">
+                        <div>
+                            <button type="button" class="btn btn-success" style="margin-right: 1vw;" (click)="goToIncomes('Cosecha')">Ingresos</button>
+                            <button type="button" class="btn btn-warning" (click)="goToExpenses('Cosecha')" >Gastos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

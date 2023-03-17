@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <h1 mat-dialog-title class="text-center mb-3">{{title}}</h1>
+        <div>
+            <form [formGroup]="addLaborExpenseForm">
+                <div class="input-group mb-4">
+                    <div class="form-group" style="margin-right: 6%; width: 47%;">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name"
+                            formControlName="name">
+                    </div>
+                    <div class="form-group" style="width: 47%;">
+                        <label for="workerName" class="form-label">Nombre del trabajador</label>
+                        <input type="text" class="form-control" id="workerName"
+                            formControlName="workerName">
+                    </div>
+                </div>
+                <div class="input-group mb-4">
+                    <div class="form-group" style="margin-right: 6%; width: 47%;">
+                        <label for="unitValue" class="form-label">Valor por jornal o bulto</label>
+                        <input type="text" class="form-control"  id="unitValue"
+                            formControlName="unitValue">
+                    </div>
+                    <div class="form-group" style="width: 47%;">
+                        <label for="numberOfJobs" class="form-label">Numero de jornales o bultos</label>
+                        <input type="text" class="form-control" id="numberOfJobs"
+                            formControlName="numberOfJobs">
+                    </div>
+                </div>
+                <div class="input-group mb-4">
+                    <div class="form-group" style="margin-right: 6%; width: 47%;">
+                        <label for="total" class="form-label">Valor total: </label>
+                        <input type="number" name="total" id="total" value="{{totalValue}}" class="form-control" disabled>
+                    </div>
+                    <div class="form-group" style="width: 47%;">
+                        <label for="date" class="form-label">Fecha: </label>
+                        <input type="date" name="date" id="date" class="form-control" formControlName="date">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="description" class="form-label">Descripcion</label>
+                    <textarea class="form-control" formControlName="description" id="description" cols="30"
+                        rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="btn-group mt-3">
+            <button class="btn btn-success col-4" (click)="action()">{{btnTxt}}</button>
+            <div class="col-1"></div>
+            <button mat-dialog-close class="btn btn-danger col-4">Cancelar</button>
+        </div>
+    </div>
+</div>

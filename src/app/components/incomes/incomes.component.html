@@ -1,0 +1,68 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <div class="content">
+        <div id="sidenav">
+            <app-sidenav></app-sidenav>
+        </div>
+        <div class="center">
+            <div class="card border border-light">
+                <div class="card-body">
+                    <div class="title">
+                        <h1 style="font-size: 40px;">{{(crop$ | async)?.nombreCultivo}} - {{(stage$ | async)?.toString()}} </h1>
+                    </div>
+                    <div class="total-expenses">
+                        <h2>Total ingresos: {{total}}</h2>
+                    </div>
+                    <div class="expenses-title">
+                        <h2>Listado de Ingresos</h2>
+                    </div>
+                    <div class="buttons">
+                        <div class="add-income mb-5">
+                            <button class="btn btn-success" (click)="openDialogAddincome()">Agregar Ingreso</button>
+                        </div>
+                    </div>
+                    <div class="expenses mt-5">
+                        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                            <ng-container matColumnDef="name">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+                              <td mat-cell *matCellDef="let row"> {{row.nombreIngreso}} </td>
+                            </ng-container>
+                    
+                            <ng-container matColumnDef="date">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha </th>
+                              <td mat-cell *matCellDef="let row"> {{row.fechaIngreso}} </td>
+                            </ng-container>
+        
+                            <ng-container matColumnDef="description">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </th>
+                                <td mat-cell *matCellDef="let row"> {{row.descripcionIngreso}} </td>
+                            </ng-container>
+        
+                            <ng-container matColumnDef="quantity">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Cantidad </th>
+                                <td mat-cell *matCellDef="let row"> {{row.cantidad}} </td>
+                            </ng-container>  
+
+                            <ng-container matColumnDef="total">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                <td mat-cell *matCellDef="let row"> {{row.valorIngreso}} </td>
+                            </ng-container>  
+                      
+                            <ng-container matColumnDef="options" class="text-center">
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Opciones </th>
+                              <td mat-cell *matCellDef="let row">
+                                  <div class="example-button-row">
+                                      <button class="btn btn-primary" (click)="editIncome(row)">Editar</button>
+                                   <button class="btn btn-danger" style="margin-left: 10px;" (click)="deleteincome(row.idIngreso)">Eliminar</button>
+                                  </div>
+                               </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <div class="content">
+        <div id="sidenav">
+            <app-sidenav></app-sidenav>
+        </div>
+        <div class="center">
+            <div class="card border border-light">
+                <div class="card-body">
+                    <div class="title">
+                        <h1 style="font-size: 40px;">{{(crop$ | async)?.nombreCultivo}} - {{(stage$ |
+                            async)?.toString()}} </h1>
+                    </div>
+                    <div class="total-expenses">
+                        <h2>Total Gastos: {{total}}</h2>
+                    </div>
+                    <div class="expenses-title">
+                        <h2>Listado de Gastos</h2>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-primary mx-2" (click)="selectType('MO')">Mano de
+                            obra</button>
+                        <button type="button" class="btn btn-primary mx-2" (click)="selectType('IN')">Insumos</button>
+                        <button type="button" class="btn btn-primary mx-2" (click)="selectType('OT')">Otros</button>
+                        <div class="add-expense">
+                            <button class="btn btn-success" (click)="openDialog()">Agregar Gasto</button>
+                        </div>
+                    </div>
+                    <div class="expenses mt-5">
+                        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+                                <td mat-cell *matCellDef="let row"> {{row.nombreGasto}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="date">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha </th>
+                                <td mat-cell *matCellDef="let row"> {{row.fechaGasto}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="description">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </th>
+                                <td mat-cell *matCellDef="let row"> {{row.descripcionGasto}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="paid">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> ¿Esta pago? </th>
+                                <td mat-cell *matCellDef="let row"> {{row.estadoPago}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="worker">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Trabajador </th>
+                                <td mat-cell *matCellDef="let row"> {{row.workerName}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="total">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                <td mat-cell *matCellDef="let row"> {{row.valorGasto}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="options" class="text-center">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Opciones </th>
+                                <td mat-cell *matCellDef="let row">
+                                    <div class="example-button-row">
+                                        <button class="btn btn-primary" (click)="openEditDialog(row)">Editar</button>
+                                        <button class="btn btn-danger" style="margin-left: 10px;" (click)="deleteExpense(row.idGasto)">Eliminar</button>
+                                        <button class="btn btn-success" *ngIf="row.estadoPago == 'N'" style="margin-left: 10px;">Pagar</button>
+                                    </div>
+                                </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="card" id="card-container">
+    <div class="card-body" id="crop-card">
+        <h2 class="card-title">{{title}}</h2>
+        <div class="totals">
+            <div>
+                <h3>Total Gastos: {{report.totalExpenses}}</h3>
+            </div> 
+            <div style="margin-left: 5vw;">
+                <h3>Total Ingresos: {{report.totalIncomes}}</h3>
+            </div>
+        </div>
+        <ngx-charts-pie-chart
+        scheme="forest"
+        [results]="data"
+        [gradient]="gradient"
+        [legend]="showLegend"
+        [legendTitle]="legendtitle"
+        [legendPosition]="legendPosition"
+        [labels]="showLabels"
+        >
+        </ngx-charts-pie-chart>
+        <div class="expenses">
+            <div>Mano de obra: {{report.totalLaborExpenses}}</div>
+            <div style="margin-left: 2vw;">Insumos: {{report.totalSuppliesExpenses}}</div>
+            <div style="margin-left: 2vw;">Otros: {{report.totalOthersExpenses}}</div>
+        </div>
+    </div>
+</div>

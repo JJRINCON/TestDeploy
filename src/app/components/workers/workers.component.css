@@ -1,0 +1,23 @@
+.content{
+    display: flex;
+}
+
+.sidenav{
+    width: 12vw;
+    position: fixed;
+    top: 7.6vh;
+    left: 0;
+}
+
+.center{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 7.6vh;
+    left: 5vw;
+}
+
+table{
+    margin: 0 auto;
+    width: 70%;
+}

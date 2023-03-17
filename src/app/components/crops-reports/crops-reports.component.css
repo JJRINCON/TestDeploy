@@ -1,0 +1,24 @@
+.content{
+    display: flex;
+}
+
+#sidenav{
+    width: 12vw;
+    position: fixed;
+    top: 7.5vh;
+    left: 0;
+}
+
+.center{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+}
+
+.reports{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

@@ -1,0 +1,59 @@
+.content{
+    display: flex;
+}
+
+.sidenav{
+    width: 12vw;
+    position: fixed;
+    top: 7.6vh;
+    left: 0;
+}
+
+.center{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 7.6vh;
+    left: 5vw;
+}
+
+.stages{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stage{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10vh;
+    width: 20vw;
+    height: 25vh;
+    border: 2px solid #000;
+}
+
+#card-container{
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 23vw;
+}
+
+#crop-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 70px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.stage-image{
+    width: 12vw; 
+    height: 16vh;
+    margin-bottom: 1.5vh;
+}
+
+

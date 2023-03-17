@@ -1,0 +1,19 @@
+#sidenav{
+    height: 92.8vh;
+    background-color: #138D75;
+}
+
+#sidenav button{
+    display: flex;
+    color: white;
+}
+
+.bottom-btns{
+    height: 75vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.top-btns{
+    margin-top: 2vh;
+}

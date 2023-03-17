@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div id="sidenav">
+            <div class="top-btns">
+                <button type="button" class="btn btn-elegant" (click)="goToCrops()"><fa-icon [icon]="cropIcon"></fa-icon>  Cultivos</button>
+                <button type="button" class="btn btn-elegant" (click)="goToWorkers()"><fa-icon [icon]="usersIcon"></fa-icon> Trabajadores</button>
+                <button type="button" class="btn btn-elegant" (click)="goToReports()"><fa-icon [icon]="reportsIcon"></fa-icon> Reportes</button>
+            </div>
+            <div class="bottom-btns">
+                <button type="button" class="btn btn-elegant" (click)="logout()"><fa-icon [icon]="exitIcon"></fa-icon> Cerrar sesion</button>
+                <button type="button" class="btn btn-elegant"><fa-icon [icon]="userIcon"></fa-icon> Cuenta</button>
+            </div>
+        </div>
+    </div>
+</div>
+

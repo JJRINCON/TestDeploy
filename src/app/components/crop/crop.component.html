@@ -1,0 +1,11 @@
+<div class="card" id="card-container">
+    <div class="card-body" id="crop-card">
+      <h3 class="card-title">{{name}}</h3>
+      <img class="crop-image" src="../../../assets/images/cultivo.png" (click)="goToStages()">
+      <p>{{description}}</p>
+      <div>
+        <button class="btn btn-success" style="width: 7vw; margin-right: 1vw;" (click)="editCrop()">Editar</button>
+        <button class="btn btn-warning" style="width: 7vw;" (click)="deleteCrop()">Eliminar</button>
+      </div>
+    </div>
+</div>

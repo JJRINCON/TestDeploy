@@ -1,0 +1,15 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <div class="content">
+        <div id="sidenav">
+            <app-sidenav></app-sidenav>
+        </div>
+        <div class="center">
+            <div class="reports">
+                <div *ngFor="let report of reports">
+                    <app-crop-report [report]="report"></app-crop-report>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

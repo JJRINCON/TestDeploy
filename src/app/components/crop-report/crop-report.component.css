@@ -1,0 +1,19 @@
+#card-container {
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 35vw;
+}
+
+#crop-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.totals{
+    display: flex;
+}
+
+.expenses{
+    display: flex;
+}

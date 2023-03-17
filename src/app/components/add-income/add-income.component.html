@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+     <h1 mat-dialog-title class="text-center">{{title}}</h1>
+     <div>
+         <form [formGroup]="addIncomeForm">
+             <div class="form-group mb-2">
+                 <label for="name" class="form-label">Nombre</label>
+                 <input type="text" class="form-control" placeholder="Ingrese el nombre" id="name" formControlName="name" >
+             </div>
+             <div class="form-group mb-2">
+                 <label for="contact" class="form-label">fecha de ingreso</label>
+                 <input type="date" class="form-control" formControlName="date" id="date" placeholder="Ingrese el numero de contacto">
+             </div>
+             <div class="form-group mb-2">
+                <label for="contact" class="form-label">Valor</label>
+                <input type="number" class="form-control" formControlName="value" id="value" placeholder="Ingrese el valor del ingreso">
+            </div>
+            <div class="form-group mb-2">
+                <label for="contact" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" formControlName="quantity" id="quantity" placeholder="Ingrese la cantidad vendida">
+            </div>
+            <div class="form-group mb-2">
+                <label for="contact" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" formControlName="description" id="description" placeholder="Ingrese la descripcion del ingreso">
+            </div>
+         </form>
+     </div>
+     <div class="btn-group mt-3">
+         <button class="btn btn-success col-4" (click)="action()">{{btnTxt}}</button>
+         <div class="col-1"></div>
+         <button mat-dialog-close class="btn btn-danger col-4">Cancelar</button>
+     </div>
+    </div>
+ </div>

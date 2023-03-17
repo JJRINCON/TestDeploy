@@ -1,0 +1,16 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <div class="content">
+        <div id="sidenav">
+            <app-sidenav></app-sidenav>
+        </div>
+        <div class="center">
+            <button mat-raised-button  class="btn btn-success" id="add-crop" (click)="openAddCropDialog()">Agregar cultivo</button>
+            <div class="crops">
+                <div *ngFor="let crop of crops">
+                    <app-crop [id]="crop.idCultivo" [name]="crop.nombreCultivo" [description]="crop.descripcionCultivo" (updateEvent)="updateCrops()"></app-crop>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
